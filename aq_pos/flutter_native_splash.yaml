@@ -1,0 +1,9 @@
+flutter_native_splash:
+  image: assets/logoaq.png
+  color: "#FFFFFF"
+  android: true
+  ios: true
+
+
+#flutter pub run flutter_native_splash:create
+#dart run flutter_native_splash:create
