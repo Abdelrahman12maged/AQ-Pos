@@ -76,7 +76,6 @@ class _WebViewAqPosState extends State<WebViewAqPos> {
       );
   }
 
-
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -92,8 +91,7 @@ class _WebViewAqPosState extends State<WebViewAqPos> {
       child: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-          
-           leading: BackButton(color: Colors.white),
+            leading: BackButton(color: Colors.white),
             title: Padding(
               padding: const EdgeInsets.only(left: 100),
               child: const Text(
@@ -102,10 +100,19 @@ class _WebViewAqPosState extends State<WebViewAqPos> {
               ),
             ),
 
-            //  actions: [
-           //    NavigationControls(controller: controller),
-           //   ],
-          //   backgroundColor: Color.fromARGB(255, 40, 9, 176),
+            actions: [
+              IconButton(
+                icon: const Icon(
+                  Icons.replay,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  controller.reload();
+                },
+              ),
+              //    NavigationControls(controller: controller),
+            ],
+            //   backgroundColor: Color.fromARGB(255, 40, 9, 176),
           ),
           body: RefreshIndicator(
               onRefresh: () async {
